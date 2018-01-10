@@ -1,0 +1,127 @@
+Chapter 1 - Meeting React
+=========================
+-Instead of defining a one-off template for your UIs, React allows you to create
+reusable UI components in JS
+
+-Creating composable UIs has been around for a long time, but React is the first
+to use pure JS without templates to make this possible. This approach is easier
+to maintain, reuse, and extend
+
+
+1.1 - What is React?
+---------------------
+-React is a UI component library
+
+-React UIs are highly self-contained, concern-specific blocks of functionality
+
+-A user interface is everything that facilitates communication between computers
+and humans
+
+-Component-based architecture (CBA) existed before React. What React brings to the
+table is the use of pure JS (without templates) and a new way to look at composing
+components.
+
+1.2 - The problem that React solves
+-----------------------------------
+-React was born primarily to address problems in building and managing complex
+web UI's for front-end applications
+-One of the most painful task when developing large web apps is managing how the
+views change in response to data changes
+
+
+1.3 - Benefits of using React
+-----------------------------
+-Some benefits of React vs other libraries and frameworks
+1. Simpler apps
+2. Fast UIs - Outstanding performance thanks to its virtual DOM and smart-reconciliation
+algorithms
+3. Less code to write - lots of libraries and components
+
+1.3.1 - Simplicity
+------------------
+-Simplicity does not equate to ease of use
+-Simpler systems work better
+-In React, simplicity is achieved with
+1. declarative over imperative style
+2. Component-based architecture using pure JS
+3. Powerful abstraction
+
+
+-Declarative means developer write how it should be, not what to do, step-by-step
+(imperative)
+-Declarative style reduces compelxity and amkes your code easier to read and understand
+
+-When the internal state changes, React updates the view accordingly
+
+-Under the hood, React uses a virtual DOM to find differences (the delta) between
+what's already in the browser and the new view. This process is called DOM diffing or
+reconciliation of state and view
+
+-One problems with templates is that developers often have to learn yet another
+language. In React, you use pure JS which means you don't need to learn a new language
+
+-Separation of concerns generally is a good pattern. In a nutshell, it means separation
+of different function such as data service, the view layer, and so on
+
+-If a framework uses a DSL, you need to learn its magic variables and methods. In React,
+you can use pure JavaScript
+
+-React has a better, shallower, more gradual learning curve compared to MVC frameworks
+
+-React's virtual DOM exists only in the JS memory, Everytime there's a data change,
+React first compares the differences using its virtual DOM;
+
+1.3.3 - Ecosystem and community
+-------------------------------
+-Most of the time, developers don't even hate to implement much of the code.
+There are lots of community resources
+
+-Marketing  of open source project is as important to its wide adoption and success
+as the code itself
+
+1.4 - Disadvantages of React
+----------------------------
+-React isn't a full-blown, Swiss Army knife - type of framework
+-React isn't as mature as other framework
+-React uses somewhat new approach to web development
+-React has a one-way binding
+-React isn't reactive
+
+1.5 - How React can fit to your web applications
+------------------------------------------------
+-You can use React for just part of your UI
+
+-React is back-end agnostic for the purposes of front-end development
+
+1.5.1 - React libraries and rendering targets
+---------------------------------------------
+In versions 0.14 and higher, the React team split the library into two packages:
+React Core (react package on NPM) and ReactDOM (react-dom package on npm)
+
+1.5.2 - Single-page applications and React
+-----------------------------------------
+-Another name for SPA architecture is thick client, because the browser, being a client,
+holds more logic and performs functions such as rendering of the HTML, validation,
+UI changes and so on
+
+-Thick-server approach - all the rendering happens on the server (rendering as in generating
+HTML from templates or UI code)
+
+1.5.3 - The React stack
+----------------------
+-React is minimalistic. It doesn't enforce a particular way of doing things like
+data modeling, styling, or routing. Because of that, developer need to pair React
+with a routing and/or modeling library
+
+1.6 Your first React code: Hello World
+--------------------------------------
+-Why not render the React element directly in the <body> element? because doing so
+can lead to conflict with other libraries and browser extensions that manipulate
+the document body
+
+-To create React element, all you need to do is call
+React.createElement(element-name, data, child)
+1. elementName - HTML as a string or a custom component class as an object
+2. data - Data in the form of attributes and properties (we'll cover properties later)
+for example null or {}
+3. child - Child element or inner HTML/text content
