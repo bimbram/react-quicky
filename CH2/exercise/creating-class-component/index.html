@@ -1,0 +1,34 @@
+   <!DOCTYPE html>
+   <html>
+     <head>
+       <meta charset="utf-8">
+       <script src="../js/react.js"></script>
+       <script src="../js/react-dom.js"></script>
+     </head>
+     <body>
+       <div id="content"></div>
+       <script type="text/javascript">
+         var h1 = React.createElement('h1', null, 'Hello World!')
+
+         // Defines a React component class with the capitalized name
+         class HelloWorld extends React.Component {
+           // Creates a render() method as an expression (function returning a single
+           // element)
+           render() {
+             // Implement a return statement with a single React element so the
+             // React class can invoke render() and receive the <div> element with
+             // two h1 element
+             return React.createElement('div', null, h1, h1)
+           }
+         }
+
+         // Attaches the React element to the real DOM element with the ID 'content'
+         ReactDOM.render(
+           // Uses the HelloWorld class to create an element by passing the object,
+           // instead of the string, as the first argument
+           React.createElement(HelloWorld, null),
+           document.getElementById('content')
+         )
+       </script>
+     </body>
+   </html>

@@ -1,0 +1,50 @@
+   <!DOCTYPE html>
+   <html>
+     <head>
+       <meta charset="utf-8">
+       <script src="../js/react.js"></script>
+       <script src="../js/react-dom.js"></script>
+     </head>
+     <body>
+       <div id="content"></div>
+       <script type="text/javascript">
+         // Defines a React component class with the capitalized name
+         class HelloWorld extends React.Component {
+           // Creates a render() method as an expression (function returning a single
+           // element)
+           render() {
+             // Concatenates three strings
+             console.log(this.props);
+             return React.createElement(
+               'h1',
+               this.props, // Passes all the properties to the child heading element
+               'Hello ' + this.props.frameworkName + ' world!!!')
+           }
+         }
+
+         // Attaches the React element to the real DOM element with the ID 'content'
+         ReactDOM.render(
+           // Remember, the parameters after the second one of a createElement()
+           // become child element and those child elements are siblings!
+           React.createElement('div', null,
+             React.createElement(HelloWorld, {
+               id: 'ember',
+               frameworkName: 'Ember.js',
+               title: 'A framework for creating ambitious web applications'
+             }),
+             React.createElement(HelloWorld, {
+               id: 'backbone',
+               frameworkName: 'Backbone.js',
+               title: 'Backbone.js gives structure to web applications...'
+             }),
+             React.createElement(HelloWorld, {
+               id: 'angular',
+               frameworkName: 'Angular.js',
+               title: 'Superheroic JavaScript MVW Framework'
+             })
+           ),
+           document.getElementById('content')
+         )
+       </script>
+     </body>
+   </html>

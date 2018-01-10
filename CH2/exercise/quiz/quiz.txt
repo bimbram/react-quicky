@@ -1,0 +1,22 @@
+1. A React component class can be created with which of the following?
+a. createComponent(),
+b. createElement(),
+c. class NAME extends React.Component,
+d. class NAME extends React.Class
+
+2. The only mandatory attribute or method of a React component is which of the following?
+a. function,
+b. return,
+c. name,
+d. render,
+e. class
+
+3. To access the url property of a component, you use which of the following?
+a. this.properties.url,
+b. this.data.url,
+c. this.props.url,
+d. url
+
+4. React properties are immutable in a context of a current component. True or false?
+
+5. React component classes allows developers to create reusable UIs. True or false?

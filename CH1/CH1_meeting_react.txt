@@ -42,14 +42,14 @@ algorithms
 -Simplicity does not equate to ease of use
 -Simpler systems work better
 -In React, simplicity is achieved with
-1. declarative over imperative style
+1. Declarative over imperative style
 2. Component-based architecture using pure JS
 3. Powerful abstraction
 
 
 -Declarative means developer write how it should be, not what to do, step-by-step
 (imperative)
--Declarative style reduces compelxity and amkes your code easier to read and understand
+-Declarative style reduces complexity and makes your code easier to read and understand
 
 -When the internal state changes, React updates the view accordingly
 

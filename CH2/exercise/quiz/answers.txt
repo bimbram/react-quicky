@@ -1,0 +1,5 @@
+1. C. class NAME extends React.Component
+2. D. render
+3. C. this.props.url
+4. True
+5. True

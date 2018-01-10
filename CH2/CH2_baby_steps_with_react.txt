@@ -1,0 +1,62 @@
+Chapter 2 - Baby steps with React
+=========================
+-The chapter covers
+(a) nesting elements
+(b) creating a component class
+(c) working with properties
+
+2.1 - Nesting elements
+----------------------
+-ReactDOM.render() takes only one element as an argument
+
+-To render more than two element, we can wrap the element in a visually neutral
+element such as <div> or <span>
+
+-All the parameters of  after the second one in createElement(), become child element and
+those child elements are siblings. You can pass unlimited number of parameters.
+
+-The first parameter on the createElement() can have two types of input:
+1. Standard HTML tag as string ('h1', 'div', 'p')
+2. React component classes as an object. For example: HelloWorld
+
+
+2.2 - Creating component Classes
+--------------------------------
+-In JSX, React uses uppercase and lowercase to differentiate a custom component
+like <HelloWorld /> from regular HTML such as <h1 />
+
+-The component class example defines render() using ES6 style, in which we omit
+the colon and the word function. The non-ES6 style is to define an object property
+with a value that is a function: render: function()
+
+-Historically, React had its own method to create a component class: React.createClass().
+In React 15.54 createClass is deprecated.
+
+-As of August 2016, most modern browsers support ES6 feature natively
+
+-Analogous to ReactDOM.render(), the render() method in createClass() can only
+return a single element. If you need to return multiple same, level elements, wrap
+them in a <div> container or another unobstrusive element such as <span>
+
+
+2.3 - Working with properties
+-----------------------------
+-Properties are unchangeable values within an element
+
+-Properties are immutable within their component
+
+-Properties can be used as follows:
+1. To render standard HTML attributes of an element: href, title, style, class,
+and so on
+2. In the JS code of React component via this.props values
+
+-React will match the property name with the list of standard attributes. If there's
+a match, the property will be rendered as an attribute of an element.
+-If there's no match with any of the standard HTML attribute names, then the property
+wont be rendered as an attribute of an element. But the value will still be accessible
+in the this.props object
+
+-Internally, React uses Object.freeze() from the ES5 standard to make the this.props
+object immutable.
+
+-To check whether an object is frozen, you can use the Object.isFrozen() method
